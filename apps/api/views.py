@@ -9,7 +9,7 @@ import pandas as pd
 import mysql.connector
 
 # Credentials to database connection
-hostname="srv982.hstgr.io"
+hostname="89.117.27.1"
 dbname="u117421904_navigator"
 uname="u117421904_navigator"
 pwd="iYoginet$123"
