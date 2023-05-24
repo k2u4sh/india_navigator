@@ -15,7 +15,6 @@ from django.http import HttpResponse
 import mysql.connector
 import datetime as dt
 
-
 hostname="sql.freedb.tech"
 dbname="freedb_navigation"
 uname="freedb_freedb_navigation"
@@ -25,10 +24,10 @@ engine = create_engine("mysql+pymysql://{user}:{pw}@{host}/{db}"
 				.format(host=hostname, db=dbname, user=uname, pw=pwd))
 
 mydb = mysql.connector.connect(
-  host=hostname,
-  user=uname,
-  password=pwd,
-  database=dbname
+                                    host=hostname,
+                                    user=uname,
+                                    password=pwd,
+                                    database=dbname
 )
 
 
@@ -79,7 +78,7 @@ def upload_user(request):
         return render(request,"home/forms.html",{'form':student})  
 
 def handle_uploaded_file(f): 
-    with open('static/uploads/'+f.name, 'wb+') as destination:  
+    with open('/opt/render/project/src/apps/home/static/uploads/'+f.name, 'wb+') as destination:  
         for chunk in f.chunks():  
             destination.write(chunk)
 
