@@ -9,10 +9,10 @@ import pandas as pd
 import mysql.connector
 
 # Credentials to database connection
-hostname="localhost"
-dbname="usco"
-uname="root"
-pwd=""
+hostname="srv982.hstgr.io"
+dbname="u117421904_navigator"
+uname="u117421904_navigator"
+pwd="iYoginet$123"
 engine = create_engine("mysql+pymysql://{user}:{pw}@{host}/{db}"
 				.format(host=hostname, db=dbname, user=uname, pw=pwd))
 
