@@ -3,7 +3,7 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-wsgi_app = "core.wsgi:application"
+wsgi_app = "core.wsgi:app"
 
 
 bind = '0.0.0.0'
