@@ -86,10 +86,10 @@ def handle_uploaded_file(f):
     return test
 
 def read_content_1(f):
-    df = pd.read_excel(r'static/uploads/'+f.name+'', sheet_name='State Care')
-    dfa = pd.read_excel(r'static/uploads/'+f.name+'', sheet_name='ISGS')
+    df = pd.read_excel(r'/opt/render/project/src/apps/home/static/uploads/'+f.name+'', sheet_name='State Care')
+    dfa = pd.read_excel(r'/opt/render/project/src/apps/home/static/uploads/'+f.name+'', sheet_name='ISGS')
 
-    content=pd.read_excel(r'static/uploads/'+f.name+'', sheet_name='Generation', skiprows=4, usecols="C", nrows=1, header=None, names=["Value"]).iloc[0]["Value"]
+    content=pd.read_excel(r'/opt/render/project/src/apps/home/static/uploads/'+f.name+'', sheet_name='Generation', skiprows=4, usecols="C", nrows=1, header=None, names=["Value"]).iloc[0]["Value"]
 
     data = df.iloc[5:44, 1:5]
     data1 = dfa.iloc[5:129, 1:9]
@@ -136,7 +136,6 @@ def getstates():
     sql = "select * from states"
     states = pd.read_sql(sql,con=engine)
     return states
-
 
 
 def solar(dta,date):
