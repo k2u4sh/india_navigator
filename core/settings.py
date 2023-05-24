@@ -27,8 +27,8 @@ DEBUG = env('DEBUG')
 ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets') 
 
 # load production server from .env
-ALLOWED_HOSTS        = ['localhost','89.117.27.1', 'localhost:85', '127.0.0.1','india-navigator.onrender.com',               env('SERVER', default='127.0.0.1') ]
-CSRF_TRUSTED_ORIGINS = ['http://localhost:85','89.117.27.1' ,'http://127.0.0.1','india-navigator.onrender.com', 'https://' + env('SERVER', default='127.0.0.1') ]
+ALLOWED_HOSTS        = ['localhost','srv982.hstgr.io', 'localhost:85', '127.0.0.1','india-navigator.onrender.com',               env('SERVER', default='127.0.0.1') ]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:85','srv982.hstgr.io' ,'http://127.0.0.1','india-navigator.onrender.com', 'https://' + env('SERVER', default='127.0.0.1') ]
 
 # Application definition
 

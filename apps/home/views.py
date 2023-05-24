@@ -16,17 +16,18 @@ import mysql.connector
 import datetime as dt
 
 
-hostname="89.117.27.1"
-dbname="u117421904_navigator"
-uname="u117421904_navigator"
-pwd="iYoginet$123"
+hostname="sql.freedb.tech"
+dbname="freedb_navigation"
+uname="freedb_freedb_navigation"
+pwd="ZcBjDXT%t3M@ERA"
+
 engine = create_engine("mysql+pymysql://{user}:{pw}@{host}/{db}"
 				.format(host=hostname, db=dbname, user=uname, pw=pwd))
 
 mydb = mysql.connector.connect(
   host=hostname,
   user=uname,
-  password="",
+  password=pwd,
   database=dbname
 )
 
