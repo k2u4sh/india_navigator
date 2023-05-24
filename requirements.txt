@@ -14,3 +14,4 @@ django-cors-headers==4.0.0
 mysqlclient==1.4.6
 pymysql==1.0.3
 SQLAlchemy==2.0.15
+pandas=2.0.1

@@ -13,7 +13,6 @@ from django.shortcuts import render
 from .forms import UploadForm
 from django.http import HttpResponse
 import mysql.connector
-import openpyxl
 import datetime as dt
 
 
