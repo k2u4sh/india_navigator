@@ -79,7 +79,7 @@ def upload_user(request):
         return render(request,"home/forms.html",{'form':student})  
 
 def handle_uploaded_file(f): 
-    with open('staticfiles/upload/'+f.name, 'wb+') as destination:  
+    with open('static/uploads/'+f.name, 'wb+') as destination:  
         for chunk in f.chunks():  
             destination.write(chunk)
 
@@ -87,10 +87,10 @@ def handle_uploaded_file(f):
     return test
 
 def read_content_1(f):
-    df = pd.read_excel(r'staticfiles/upload/'+f.name+'', sheet_name='State Care')
-    dfa = pd.read_excel(r'staticfiles/upload/'+f.name+'', sheet_name='ISGS')
+    df = pd.read_excel(r'static/uploads/'+f.name+'', sheet_name='State Care')
+    dfa = pd.read_excel(r'static/uploads/'+f.name+'', sheet_name='ISGS')
 
-    content=pd.read_excel(r'staticfiles/upload/'+f.name+'', sheet_name='Generation', skiprows=4, usecols="C", nrows=1, header=None, names=["Value"]).iloc[0]["Value"]
+    content=pd.read_excel(r'static/uploads/'+f.name+'', sheet_name='Generation', skiprows=4, usecols="C", nrows=1, header=None, names=["Value"]).iloc[0]["Value"]
 
     data = df.iloc[5:44, 1:5]
     data1 = dfa.iloc[5:129, 1:9]
