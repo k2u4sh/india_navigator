@@ -32,9 +32,9 @@ mycursor = mydb.cursor()
 @api_view(('GET',))
 def getApiValue(request):
    if request.method == "GET":
-      #   location =  request.GET.get("location")
-      #   type =  request.GET.get("type")
-        sql = "select * from final_data"
+        startDate =  request.GET.get("startDate")
+        lastDate =  request.GET.get("lastDate")
+        sql = "select * from final_data WHERE date BETWEEN '"+startDate+"' AND '"+lastDate+"'"
         graph = pd.read_sql(sql,con=engine)
         datasets = []
         data=[]
