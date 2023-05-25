@@ -56,7 +56,7 @@ def getApiValue(request):
 
         if len(myresult) > 0:
             for x in myresult:
-                gd = {"date":x[8],"wind":x[1],"solar":x[2],"interstatewind":[3],"intrastatewind":[4],"interstatesolar":[5],"intrastatesolar":[6]}
+                gd = {"date":x[8],"wind":x[1],"solar":x[2],"interstatewind":x[3],"intrastatewind":x[4],"interstatesolar":x[5],"intrastatesolar":x[6]}
                 graphD.append(gd)
                 if len(graphD) == len(myresult):
                     data = {"data":data,"datagraph":graphD}
