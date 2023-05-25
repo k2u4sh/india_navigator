@@ -21,14 +21,14 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY', default='S#perS3crEt_007')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG')
 
 # Assets Management
 ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets') 
 
 # load production server from .env
-ALLOWED_HOSTS        = ['localhost','srv982.hstgr.io', 'localhost:85', '127.0.0.1','india-navigator.onrender.com',               env('SERVER', default='127.0.0.1') ]
-CSRF_TRUSTED_ORIGINS = ['http://localhost:85','srv982.hstgr.io' ,'http://127.0.0.1','india-navigator.onrender.com', 'https://' + env('SERVER', default='127.0.0.1') ]
+ALLOWED_HOSTS        = ['localhost','https://navigator.sidmaninfotech.com/','srv982.hstgr.io', 'localhost:85', '127.0.0.1','india-navigator.onrender.com',               env('SERVER', default='127.0.0.1') ]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:85','https://navigator.sidmaninfotech.com/','srv982.hstgr.io' ,'http://127.0.0.1','india-navigator.onrender.com', 'https://' + env('SERVER', default='127.0.0.1') ]
 
 # Application definition
 
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
 
-    "http://localhost:3000",
+    "http://localhost:3000","https://navigator.sidmaninfotech.com"
     
 ]
 
